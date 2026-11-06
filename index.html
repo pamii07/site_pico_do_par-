@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pico do Paraná - Beleza Natural do Paraná</title>
+    <!-- Fonte estilo Lettering (Pacifico) via Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: lightblue;
+            padding: 20px;
+        }
+        nav {
+            background-color: lightgray;
+            padding: 15px;
+        }
+        main {
+            background-color: white;
+            padding: 20px;
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header id="cabecalho">
+        <h1 id="titulo-header">Meu Site</h1>
+    </header>
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+    </nav>
+    <main id="conteudo">
+        <!-- O JavaScript criará os elementos aqui -->
+    </main>
+
+    <script>
+        // 1. MODIFICAR O CSS VIA JAVASCRIPT (Combinação harmoniosa de Castanho e Verde)
+        document.body.style.backgroundColor = "#f9f6f0"; // Fundo bege-claro suave (creme)
+        document.body.style.textAlign = "center";
+
+        const header = document.getElementById("cabecalho");
+        header.style.backgroundColor = "#3e2723"; // Castanho-escuro elegante
+        header.style.color = "#ffffff";
+
+        // Título do cabeçalho em Lettering
+        const tituloHeader = document.getElementById("titulo-header");
+        tituloHeader.textContent = "Beleza Natural do Paraná";
+        tituloHeader.style.fontFamily = "'Pacifico', cursive";
+        tituloHeader.style.fontSize = "36px";
+        tituloHeader.style.margin = "0";
+
+        const main = document.getElementById("conteudo");
+        main.style.maxWidth = "750px";
+        main.style.margin = "30px auto";
+        main.style.borderRadius = "12px";
+        main.style.boxShadow = "0 4px 15px rgba(62, 39, 35, 0.08)";
+        main.style.padding = "35px";
+        main.style.backgroundColor = "#ffffff";
+
+        // 2. CRIAR O TÍTULO PRINCIPAL (h1) EM LETTERING (Verde-floresta)
+        const tituloPrincipal = document.createElement("h1");
+        tituloPrincipal.textContent = "Pico do Paraná";
+        tituloPrincipal.style.fontFamily = "'Pacifico', cursive";
+        tituloPrincipal.style.fontSize = "48px";
+        tituloPrincipal.style.color = "#2e4a3e"; // Verde-floresta suave
+        tituloPrincipal.style.marginTop = "0";
+        tituloPrincipal.style.marginBottom = "25px";
+        main.appendChild(tituloPrincipal);
+
+        // 3. CRIAR A IMAGEM (img)
+        const imagem = document.createElement("img");
+        imagem.src = "https://upload.wikimedia.org/wikipedia/commons/b/b4/PicoParana2006.jpg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original";
+        imagem.alt = "Pico do Paraná";
+        imagem.style.width = "100%";
+        imagem.style.maxHeight = "380px";
+        imagem.style.objectFit = "cover";
+        imagem.style.borderRadius = "8px";
+        imagem.style.marginBottom = "25px";
+        main.appendChild(imagem);
+
+        // 4. CRIAR PARÁGRAFOS (p)
+        const paragrafo1 = document.createElement("p");
+        paragrafo1.textContent = "Com 1.877 metros de altitude, o Pico do Paraná é a montanha mais alta de toda a Região Sul do Brasil. Localizado na Serra do Mar, entre os municípios de Antonina e Campina Grande do Sul, é uma joia preservada da biodiversidade paranaense.";
+        paragrafo1.style.fontSize = "17px";
+        paragrafo1.style.lineHeight = "1.6";
+        paragrafo1.style.color = "#4e342e"; // Castanho-médio confortável para leitura
+        main.appendChild(paragrafo1);
+
+        const paragrafo2 = document.createElement("p");
+        paragrafo2.textContent = "Apesar de menos famoso que as praias ou as cataratas, o local é o destino definitivo para os amantes de trekking e montanhismo, oferecendo uma vista panorâmica inesquecível de toda a serra e do Oceano Atlântico em dias limpos.";
+        paragrafo2.style.fontSize = "15px";
+        paragrafo2.style.lineHeight = "1.6";
+        paragrafo2.style.color = "#5d4037"; // Tom castanho suave
+        main.appendChild(paragrafo2);
+
+        // 5. SUBTÍTULO E LISTA
+        const subtitulo = document.createElement("h3");
+        subtitulo.textContent = "Destaques da Expedição:";
+        subtitulo.style.color = "#2e4a3e"; // Verde-floresta em harmonia com o h1
+        subtitulo.style.marginTop = "30px";
+        subtitulo.style.fontSize = "20px";
+        main.appendChild(subtitulo);
+
+        const lista = document.createElement("ul");
+        lista.style.listStylePosition = "inside";
+        lista.style.padding = "0";
+        lista.style.textAlign = "left";
+        lista.style.display = "inline-block";
+        lista.style.color = "#4e342e";
+
+        const item1 = document.createElement("li");
+        item1.textContent = "Ponto culminante do Sul do Brasil (1.877m de altitude).";
+
+        const item2 = document.createElement("li");
+        item2.textContent = "Trilha desafiadora imersa em áreas preservadas da Mata Atlântica.";
+
+        const item3 = document.createElement("li");
+        item3.textContent = "Possibilidade de acampamento no topo para observar o nascer do sol.";
+
+        lista.appendChild(item1);
+        lista.appendChild(item2);
+        lista.appendChild(item3);
+
+        main.appendChild(lista);
+    </script>
+</body>
+</html>
